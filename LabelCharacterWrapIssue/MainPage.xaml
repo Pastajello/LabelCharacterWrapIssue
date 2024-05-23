@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="LabelCharacterWrapIssue.MainPage">
+    <Grid ColumnDefinitions="*,auto"
+          BackgroundColor="green"
+          ColumnSpacing="10">
+        <VerticalStackLayout Grid.Row="2"
+                             CompressedLayout.IsHeadless="True"
+                             VerticalOptions="Center">
+            <Label
+                LineBreakMode="TailTruncation"
+                Text="DisplayName"/>
+            <Label
+                LineBreakMode="CharacterWrap"
+                BackgroundColor="Red"
+                Text="someverylongemailblablablablablablablablablablabla@gmail.com"/>
+        </VerticalStackLayout>
+        <Button
+            Grid.Column="2"
+            Padding="20,0"
+            HeightRequest="45"
+            HorizontalOptions="End"
+            Text="buttom"
+            VerticalOptions="Center"
+            WidthRequest="90"
+            CommandParameter="{Binding .}">
+        </Button>
+    </Grid>
+</ContentPage>
